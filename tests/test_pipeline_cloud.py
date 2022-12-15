@@ -18,12 +18,6 @@ def test_cloud_init_failure(url, top_api_server_bad_token, bad_token):
         PipelineCloud(url=url, token=bad_token)
 
 
-def test_cloud_upload_file(url, top_api_server, token, file_get, tmp_file):
-    api = PipelineCloud(url=url, token=token)
-    f = api.upload_file(tmp_file)
-    assert f == file_get
-
-
 def test_cloud_upload_function_fail(url, top_api_server, token):
     api = PipelineCloud(url=url, token=token)
     with pytest.raises(InvalidSchema):
