@@ -4,7 +4,6 @@ import hashlib
 import io
 import json
 import os
-import pathlib
 import sys
 import urllib.parse
 import uuid
